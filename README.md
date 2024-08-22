@@ -20,6 +20,7 @@ seneca.act({ role: 'math', cmd: 'sum', left: 1, right: 2 }, (err, result) => {
   if (err) return console.error(err);
   console.log('Result:', result.answer);
 });
+
 ==============================================================================
 output :3 {while you run this}
 
