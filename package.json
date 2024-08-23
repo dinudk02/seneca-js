@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/dinudk02/seneca-js#readme",
   "dependencies": {
-    "seneca": "^4.0.0-rc4"
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "seneca": "^4.0.0-rc4",
+    "seneca-web": "^2.2.2",
+    "seneca-web-adapter-express": "^1.2.1"
   }
 }

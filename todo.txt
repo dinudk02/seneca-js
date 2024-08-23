@@ -1,0 +1,5 @@
+seneca.add => used to add the method
+seneca.act  => to use the method 
+
+
+

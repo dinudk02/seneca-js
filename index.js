@@ -1,12 +1,12 @@
-const seneca = require('seneca')();
+var seneca = require('seneca')()
 
-// Define a basic action
-seneca.add({ role: 'math', cmd: 'sum' }, (msg, reply) => {
-  reply(null, { answer: msg.left + msg.right });
-});
+seneca.add({cmd: 'salestax'}, function (args, callback) {
+  var rate = 0.23
+  var total = args.net * (1 + rate)
+  callback(null, {total: total})
+})
 
-// Test the action
-seneca.act({ role: 'math', cmd: 'sum', left: 1, right: 5 }, (err, result) => {
-  if (err) return console.error(err);
-  console.log('Result:', result.answer);
-});
+seneca.act({cmd: 'salestax', net: 100}, function (err, result) {
+  if (err) return console.error(err)
+  console.log(result.total)
+})
